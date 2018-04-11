@@ -7,9 +7,57 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    .box {
+        height: 80px;
+    }
+    
+    ul {
+        display: flex;
+        height: 100%;
+    }
+    
+    ul li {
+        flex: 1;
+        line-height: 80px;
+        text-align: center;
+    }
+    
+    .a {
+        background: red;
+    }
+    
+    .top {
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+    }
+</style>
 
 <body>
-
+    <div class="top">
+        无连接
+    </div>
+    <div class="box">
+        <ul>
+            <li>电源</li>
+            <li>首页</li>
+            <li>菜单</li>
+            <li>截屏</li>
+        </ul>
+    </div>
 </body>
+<script>
+    var oli = document.querySelector("li");
+    oli.onclick = function() {
+        this.classlist.add(".a");
+    }
+</script>
 
 </html>
